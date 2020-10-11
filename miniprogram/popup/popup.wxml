@@ -1,0 +1,21 @@
+<!--tabbar/popup.wxml-->
+<view class='' hidden="{{flag}}">
+  <view class="popup-box">
+    <view class="title-div">{{title}}</view>
+    <view class="address-div">
+        <text class="add-text">地址：</text><input id="address" type="add-text" class="add-input" maxlength="50" placeholder="地址" bindinput="_userAddressInput" value="{{address}}"></input>
+    </view>
+    <view class='address-div'>
+      <text class="add-text">手机号:</text>
+      <input id="phone" class="add-input " maxlength="11" type="number" placeholder="手机号码" bindinput="_userPhoneInput" value="{{phone}}"></input>
+    </view>
+    <view class='address-div'>
+      <text class="add-text">备注：</text>
+      <input class="add-input" id="tip"  type="text" maxlength="20" placeholder="备注(20字以内)" bindinput="_userTipInput"></input>
+    </view>
+    <view class="btn-div">
+      <text class='btn-ok' bindtap="_success">{{btn_ok}}</text>
+      <text class="btn-no" bindtap="_cancel">{{btn_no}}</text>
+    </view>
+  </view> 
+</view>

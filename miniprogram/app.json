@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shopping-cart/shopping-cart",
+    "pages/merchat/merchat",
+    "pages/merchat_login/merchat_login",
+    "pages/customer_order_show/customer_order_show",
+    "pages/merchat_total/merchat_total",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/merchatFinish/merchatFinish",
+    "pages/merchatTakeOut/merchatTakeOut"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "陈记干面",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#ea9999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "菜单",
+        "iconPath": "assets/images/statement.png",
+        "selectedIconPath": "assets/images/statement_selected.png"
+      },
+      {
+        "pagePath": "pages/shopping-cart/shopping-cart",
+        "text": "购物车",
+        "iconPath": "assets/images/work.png",
+        "selectedIconPath": "assets/images/work_selected.png"
+      },
+      {
+        "pagePath": "pages/customer_order_show/customer_order_show",
+        "text": "我的",
+        "iconPath": "assets/images/profile.png",
+        "selectedIconPath": "assets/images/profile_selected.png"
+      },{
+        "pagePath": "pages/merchat_login/merchat_login",
+        "text": "商家登录",
+        "iconPath": "assets/images/profile.png",
+        "selectedIconPath": "assets/images/profile_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "cloud": true
+}

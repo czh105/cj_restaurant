@@ -1,0 +1,121 @@
+/**index.wxss**/
+
+/**index.wxss**/
+.container{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  overflow:hidden
+}
+.menu-tab{
+  width:25%;
+  height: 100%;
+  position: absolute;
+  align-items: left;
+  left:0px;
+  top:0px;
+  display: flex; 
+  flex-direction: column;
+}
+.menu-tab .menu-item{
+  width:100%;
+  height:60px;
+  border-bottom: 1px outset #555;
+  border-top: 1px outset #555;
+}
+.menu-tab .menu-item text{
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: large;
+  font-weight: 400;
+  color: rgb(71, 64, 134);
+  padding-left: 10px;
+}
+.active{
+  background-color: darkgrey;
+}
+.goodslist{
+  width: 75%;
+  height: 100%;
+  position: relative;
+  margin-left: 25%;
+}
+.goodslist .goods-header{
+  height: 20px;
+  margin-left: 5px;
+  line-height: 20px;
+}
+.goodslist .goods:nth-child(odd){
+  width:100%;
+  height:90px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ddd;
+  background-color: ivory;
+}
+.goodslist .goods:nth-child(even){
+  width:100%;
+  display: flex;
+  height:90px;
+  flex-direction: row;
+  border-bottom: 1px solid #ddd;
+  background-color: honeydew;
+  justify-content: center;
+}
+.goodslist .goods .good-img-div{
+  width: 100%;
+  height: 100%;
+}
+.goodslist .goods .good-img-div .goods-img{
+  width: 100%;
+  height: 100%;
+}
+.goodslist .goods .goods-navigator{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-top:5%;
+  flex-direction: column;
+  align-items: center;
+}
+.goodslist .goods .goods-navigator .good-name{
+  width: 100%;
+  margin-top:0%;
+  text-align: left;
+}
+.goodslist .goods .goods-navigator .good-price{
+  justify-content: space-between;
+  text-align: left;
+  margin-left:0px;
+  color:#e4393c;
+  font-weight: 600;
+}
+.goodslist .goods .goods-navigator .good-note{
+  width:100%;
+  font-size: xx-small;
+}
+.goodslist .goods .btn {
+  width:80px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top:10%;
+  margin-right:0;
+}
+.butt{
+  height:20px;
+  width: 20px;
+  text-align: center;
+  border: 1px outset rgb(211, 236, 236) ;
+}
+.dish-count{
+  width:30px;
+  height:20px;
+  text-align:center;
+  border: 1px inset rgb(231, 246, 248);
+}
+

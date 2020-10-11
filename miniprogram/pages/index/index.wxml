@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view>
+  <view  class="container" hidden="{{!isWork}}">
+    <scroll-view class="menu-tab" scroll-y="false" scroll-width-animation='true'>
+      <view wx:for="{{messageList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="ClickMenu" class="menu-item {{curId == item.id ? 'active':''}}">
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+    <scroll-view class="goodslist" scroll-into-view="{{toView}}" scroll-y="true" bindscroll="scroll" scroll-width-animation='true' scroll-top="{{scrollTop}}">
+        <!--item-->
+        <view wx:for="{{messageList}}" wx:key="{{item.id}}" id="{{item.id}}">
+          <view class="goods-header">{{item.name}}</view>
+          <view class="goods" wx:for="{{item.foods}}" wx:for-item="food" wx:key="{{food.id}}">
+            <!--左侧图片盒子-->
+            <view class="good-img-div">
+              <image src="{{food.thumb}}" class="goods-img"></image>
+            </view>
+            <!--右侧说明部分-->
+            <!--上--文字说明-->
+            <view class="goods-navigator">
+              <view class="good-name">
+                <text>{{food.desc}}</text>  
+              </view>
+              <view class="good-note">
+                <text>{{food.title}}</text>
+              </view>
+              <view class="good-price">
+                <text>￥{{food.price}}</text>
+              </view>
+            </view>
+            <!--下--价格部分-->
+            <view class="btn">
+                  <label id="del{{food.id}}" size="mini" bindtap="dishCountSub" class="butt">-</label>
+                  <input id="count{{food.id}}" type="number" disabled="disabled" class="dish-count" value="{{food.count}}" />
+                  <label id="add{{food.id}}" size="mini" bindtap="dishCountAdd" class="butt">+</label>
+            </view>           
+
+          </view>
+        </view>
+    </scroll-view> 
+  </view>
+  <view hidden="{{isWork}}">
+    本店休息中.........
+  </view>
+</view>
+

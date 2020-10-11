@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "mp-badge": "../vant-weapp/badge"
+    }
+}

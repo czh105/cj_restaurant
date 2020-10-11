@@ -1,0 +1,18 @@
+<!--miniprogram/pages/merchat_login/merchat_login.wxml-->
+<view>
+  <view>该账号只能商家登录</view>
+  <view class="tab-login">
+    <view class="title-row"><text>商家登录</text></view>
+    <view class="row">
+      <text>账号：</text>
+      <input type="text" value="{{merchatid}}" bindinput="IdInput"></input>
+    </view>
+    <view class="row">
+      <text>密码:</text>
+      <input type="text" value="{{merchatPwd}}" bindinput="pwdInput" ></input>
+    </view>
+    <view class="row-btn">
+      <button bindtap="login">登录</button><button  bindtap="cancel">取消</button>
+    </view>
+  </view>
+</view>

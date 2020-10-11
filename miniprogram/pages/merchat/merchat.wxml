@@ -1,0 +1,59 @@
+<!--pages/customer_order_show/customer_order_show.wxml-->
+<view class="menu-tabbar">
+  <view class="menu-tabbar-active">进行中</view>
+  <view catchtap="menuFinish">完成</view>
+  <view bindtap="menuTabbarTakeOut">送餐中</view>
+  <view bindtap="menuTabbarStore">我的店铺</view>
+</view>
+<view hidden="{{!isExit}}" class="content">
+  <scroll-view class="scroll-view" scroll-y="true">
+    <view  wx:for="{{orderList}}" class="content-show">
+      <view class="order-panel">
+        <view>
+          <text class="order-id">id:{{item.orderid}}</text>
+          <text class="order-state">{{item.orderState}}</text>
+        </view>
+        <view>
+          <text class="order-time">{{item.orderTime}}</text>
+          <text class="order-total">￥:{{item.total}}</text>
+        </view>
+        <view class="dish-item">
+          <view class="dish-title" data-index='{{index}}' catchtap="showAndColse">
+          <view class='title-name'>
+            <text>订单信息</text>
+            <image src="../../images/{{showIndex == index ? 'up':'down'}}.png"></image>
+          </view>
+          <view class='detail' wx:if="{{showIndex == index}}">
+            <view class="panel-according-form">
+              <view class="table">
+                <view class='tr'>
+                  <view class='th'>编号</view>
+                  <view class='th'>菜品名</view>
+                  <view class='th'>价格</view>
+                  <view class='th'>数量</view>
+                </view>
+                <view class='tr' wx:for="{{item.dish}}" wx:for-item="dish" wx:for-index="dishNo">
+                  <view class='td'>{{dishNo}}</view>
+                  <view class='td'>{{dish.desc}}</view>
+                  <view class="td">{{dish.price}}</view>
+                  <view class='td'>{{dish.count}}</view>
+                </view>
+              </view>
+              <view>备注:{{item.tip}}</view>
+            </view>
+          </view>
+        
+          </view>
+        </view>
+        <view class="order-message">
+          <view>地址：{{item.address}}</view>
+          <view>电话：{{item.phone}}</view>
+          <button id='up{{item.orderid}}' class="finish-btn" size="mini" bindtap="updateOrderMessage">完成</button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view hidden="{{isExit}}" class="content-center">
+  <view style="height:80%;text-align:center;">亲，你还没有订单，快去看看菜单吧</view>
+</view>

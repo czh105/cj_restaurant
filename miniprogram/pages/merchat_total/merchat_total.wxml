@@ -1,0 +1,49 @@
+<!--pages/merchat_total/merchat_total.wxml-->
+<view class="menu-tabbar">
+  <view bindtap="menuTabbarMerchatActive">进行中</view>
+  <view bindtap="menuTabbarFinish">完成</view>
+  <view bindtap="menuTabbarTakeOutActive">送餐中</view>
+  <view class="menu-tabbar-active">我的店铺</view>
+</view>
+<view class="content">
+  <view class="menu-state">
+    <view class="menu-store-state">
+      <text>店铺状态：</text>
+      <text class="merchat-state" bindtap="updateMerchatState" id="{{merchatState}}">{{merchatState}}</text>
+    </view>
+    <view class="menu-store-login" bindtap="loginOut">退出登录</view>
+    
+  </view>
+  <scroll-view class="order-list-content" croll-y="false" scroll-width-animation='true'>
+    <view class="order-message-row" wx:for="{{orderList}}" wx:for-item="order" wx:key="{{order.orderid}}">
+      <view class="dish-title" data-index='{{index}}' catchtap="showAndColse">
+        <view class="order-title-row">
+          <view class="order-title-message">
+              <text>订单编号：{{index+1}}</text>
+              <text>￥：{{order.total}}</text>
+          </view>
+          <view class="order-title-message">
+              <image class="image-div" src="../../images/{{showIndex == index ? 'up':'down'}}.png"></image>
+          </view>
+        </view>
+        <view class="detail" wx:if="{{showIndex == index}}" >
+          <view class="dish-row" wx:for="{{order.dish}}" wx:for-item="dish" wx:for-index="dishcount">
+            <view>{{dishcount}}</view>
+            <view>{{dish.desc}}</view>
+            <view>￥：{{dish.price}}</view>
+            <view>x{{dish.count}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="menu-footer-time">
+  <view class="input-view"><text>营业时间：</text><input type="text" bindinput="merchatTimeInput" value="{{merchatTime}}"></input></view>
+  <view class="btn-view" bindtap="updateMerchatTime"><text>确认</text></view>
+</view>
+<view class="menu-footer">
+    <view class="menu-total">总计：￥{{ordertotal}}</view>
+    <view class="menu-count">订单单数：{{ordercount}}</view>
+</view>
+

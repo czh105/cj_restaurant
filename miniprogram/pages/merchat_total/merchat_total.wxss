@@ -1,0 +1,183 @@
+/* pages/merchat_total/merchat_total.wxss */
+.menu-tabbar{
+  display: flex;
+  position: fixed;
+  top:0px;
+  width: 100%;
+  height: 7.5%;
+  justify-content: space-between;
+  background-color: royalblue;
+  text-align: center;
+  z-index: -100;
+}
+.menu-tabbar .menu-tabbar-active{
+  background-color: rgb(87, 146, 204);
+  color: rgb(10, 10, 10);
+}
+.menu-tabbar view{
+  width: 100%;
+  line-height: 40px;
+}
+.content{
+  width: 100%;
+  height:77.5%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top:7.5%;
+  background-color: #a1b8f1;
+}
+.content .menu-state{
+  width: 100%;
+  height: 7.5%;
+  display: flex;
+  flex-direction: row;
+  background-color: lightslategray;
+  text-align: center;
+}
+.content .menu-state .menu-store-state{
+  width:50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  float: left;
+  margin-left:10%;
+}
+.content .menu-state .menu-store-state text{
+  margin-top: 5%;
+  width:40%;
+  height: 100%;
+  font-size: x-small;
+}
+.content .menu-state .menu-store-state button{
+  font-size: initial;
+  width:40%;
+  height: 100%;
+}
+.content .menu-state .menu-store-login{
+  width:30%;
+  margin-right: 5%;
+  margin-left:5%;
+  height: 100%;
+}
+.content .order-list-content{
+  width:100%;
+  height: 92.5%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+.content .order-list-content .order-message-row{
+  width: 100%;
+}
+.content .order-list-content .order-message-row:nth-child(odd){
+  background-color: papayawhip;
+  border: 1px solid gray;
+}
+.content .order-list-content .order-message-row:nth-child(even){
+  background-color: silver;
+}
+.content .order-list-content .order-message-row .order-title-row{
+  width:100%;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  font-size: x-small;
+}
+.content .order-list-content .order-message-row .order-title-row .order-title-message{
+  width: 40%;
+  height: 100%;
+  margin-left: 5%;
+}
+.content .order-list-content .order-message-row .order-title-row .order-title-message .image-div{
+  width:10%;
+  height: 80%;
+  text-align: center;
+  float:right;
+}
+.dish-row{
+  display: flex;
+  flex-direction: row;
+}
+.dish-row:nth-child(even){
+  background-color: gray;
+}
+.dish-row:nth-child(odd){
+  background-color: grey;
+}
+.dish-row view{
+  height: 100%;
+  width: 25%;
+  text-align: center;
+  font-size: x-small;
+}
+.menu-footer-time{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: 7.5%;
+  bottom: 7.5%;
+  flex-direction: row;
+  left:0;
+  background-color: lightgrey;
+}
+.menu-footer-time .input-view{
+  position: relative;
+  width:70%;
+  height:100%;
+  line-height: 50%;
+  top:25%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+.menu-footer-time .input-view text{
+  width:25%;
+  height: 50%;
+  position: relative;
+  top:25%;
+  font-size: x-small;
+}
+.menu-footer-time .input-view input{
+  width:75%;
+  height:50%;
+  background-color: white;
+  font-size: small;
+  text-align: left;
+}
+.menu-footer-time .btn-view{
+  width:30%;
+  height: 100%;
+  background-color: royalblue;
+}
+.menu-footer-time .btn-view text{
+  position: relative;
+  width:100%;
+  height:50%;
+  top:25%;
+  left:25%;
+  line-height: 100%;
+  text-align: center;
+}
+.menu-footer{
+  position: fixed;
+  width:100%;
+  height: 7.5%;
+  background-color: lavender;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+}
+.menu-footer .menu-total{
+  margin-top:2.5%;
+  width:50%;
+  height:100%;
+  text-align: center;
+}
+.menu-footer .menu-count{
+  margin-top:2.5%;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
